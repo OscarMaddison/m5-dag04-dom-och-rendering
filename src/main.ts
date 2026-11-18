@@ -36,6 +36,14 @@ for (const lank of menyLankar) {
     console.log(lank.getAttribute("href"), lank.textContent);
 }
 
+//4
+const nyP = document.createElement("p");
+nyP.textContent = "Dagens tips: prova en kardemummabulle.";
+const hero = document.querySelector("#hero");
+if (hero != null) {
+    hero.append(nyP);
+}
+
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
 // 8. Anropa visaMeny med menyn, och uppdateraRubrik med antalet rätter.
