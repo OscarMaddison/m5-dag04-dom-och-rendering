@@ -23,6 +23,11 @@ if (rubrik != null) {
 }
 console.log(rubrikText);
 
+const heroRubrik = document.querySelector("#hero-rubrik");
+if (heroRubrik != null) {
+    heroRubrik.textContent = "Välkommen in!";
+}
+
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
 // 8. Anropa visaMeny med menyn, och uppdateraRubrik med antalet rätter.
