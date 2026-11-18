@@ -47,7 +47,7 @@ hero?.classList.add("dagens");
 hero?.classList.remove("dagens");
 
 //6
-nyP.textContent = '<img src="x" onerror="console.log(\'Attack!\')">'
+nyP.textContent = '<img src="x" onerror="console.log(\'Attack!\')">'    //innerHTML är farligt för det låter folk lägga in kod via externa filer
 
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
