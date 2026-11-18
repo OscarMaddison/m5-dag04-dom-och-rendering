@@ -15,7 +15,8 @@ import { billigast } from "./meny";
 // 5. Lägg klassen "dagens" på #hero med classList.add. Ta bort den med classList.remove.
 // 6. Säkerhetsförsök: sätt p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">'
 //    Vad händer i Console? Byt sedan till p.textContent med samma text. Vad händer nu?
-// TODO
+
+//1
 const rubrik = document.querySelector("h1");
 let rubrikText: string = "";
 if (rubrik != null) {
@@ -23,9 +24,16 @@ if (rubrik != null) {
 }
 console.log(rubrikText);
 
+//2
 const heroRubrik = document.querySelector("#hero-rubrik");
 if (heroRubrik != null) {
     heroRubrik.textContent = "Välkommen in!";
+}
+
+//3
+const menyLankar = document.querySelectorAll("nav a");
+for (const lank of menyLankar) {
+    console.log(lank.getAttribute("href"), lank.textContent);
 }
 
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
