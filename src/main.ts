@@ -20,7 +20,7 @@ import { billigast } from "./meny";
 const rubrik = document.querySelector("h1");
 let rubrikText: string = "";
 if (rubrik != null) {
-    rubrikText = rubrik.textContent;
+    rubrikText = rubrik?.textContent;
 }
 console.log(rubrikText);
 
@@ -40,9 +40,11 @@ for (const lank of menyLankar) {
 const nyP = document.createElement("p");
 nyP.textContent = "Dagens tips: prova en kardemummabulle.";
 const hero = document.querySelector("#hero");
-if (hero != null) {
-    hero.append(nyP);
-}
+hero?.append(nyP);
+
+//5
+hero?.classList.add("dagens");
+hero?.classList.remove("dagens");
 
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
