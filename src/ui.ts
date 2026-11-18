@@ -44,7 +44,20 @@ export function skapaRattKort(ratt: Ratt): HTMLElement {
 // 2. Töm containern och lägg in ett kort per rätt.
 //    Är listan tom: visa <p class="tom">Inga rätter hittades.</p> istället.
 export function visaMeny(container: HTMLElement, ratter: Ratt[]): void {
-  // TODO
+  while(container.firstChild) { 
+    container.removeChild(container.firstChild); 
+  } 
+  if (ratter.length != 0) {
+    for (const ratt of ratter) {
+      const rattKort = skapaRattKort(ratt);
+      container.append(rattKort);
+    }
+  } else {
+    const tom = document.createElement("p");
+    tom.classList.add("tom");
+    tom.textContent = "Inga rätter hittades.";
+    container.append(tom);
+  }
 }
 
 // 3. Sätt rubrikens text: "Meny (8 rätter)". Ett enda: "Meny (1 rätt)".
