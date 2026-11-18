@@ -16,7 +16,12 @@ import { billigast } from "./meny";
 // 6. Säkerhetsförsök: sätt p.innerHTML = '<img src="x" onerror="console.log(\'Attack!\')">'
 //    Vad händer i Console? Byt sedan till p.textContent med samma text. Vad händer nu?
 // TODO
-
+const rubrik = document.querySelector("h1");
+let rubrikText: string = "";
+if (rubrik != null) {
+    rubrikText = rubrik.textContent;
+}
+console.log(rubrikText);
 
 // DEL 2: koppla ihop med funktionerna i ui.js ----------------------------
 // 7. Hämta #meny-lista och #meny-rubrik.
