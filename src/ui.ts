@@ -44,9 +44,7 @@ export function skapaRattKort(ratt: Ratt): HTMLElement {
 // 2. Töm containern och lägg in ett kort per rätt.
 //    Är listan tom: visa <p class="tom">Inga rätter hittades.</p> istället.
 export function visaMeny(container: HTMLElement, ratter: Ratt[]): void {
-  while(container.firstChild) { 
-    container.removeChild(container.firstChild); 
-  } 
+  container.replaceChildren();
   if (ratter.length != 0) {
     for (const ratt of ratter) {
       const rattKort = skapaRattKort(ratt);
@@ -72,16 +70,16 @@ export function uppdateraRubrik(element: HTMLElement, antal: number): void {
 // 4. Markera EN rätt som dagens rätt: klassen "dagens" ska finnas på kortet med rätt
 //    data-id, och inte på något annat kort. Anropas igen = markeringen flyttas.
 export function markeraDagensRatt(container: HTMLElement, id: number): void {
-  /*const igar = container.querySelector(`.dagens`)
-  const idag = container.querySelector(`[id="${id}"]`)
+  const igar = container.querySelector(`.dagens`)
+  const idag = container.querySelector(`[data-id="${id}"]`)
   if (idag) {
     igar?.classList.remove("dagens");
     idag?.classList.add("dagens");
-  }*/
-  const rattCards = container.querySelectorAll('article')
+  }
+  /*const rattCards = container.querySelectorAll('article')
   for (const card of rattCards) {
     if (card.dataset.id === id.toString()) {
       card.classList.toggle('dagens', true)
     } else card.classList.toggle('dagens', false)
-  }
+  }*/
 }
