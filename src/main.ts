@@ -69,3 +69,8 @@ if (!menyLista.querySelector(".tom")){
 }
 uppdateraRubrik(menyRubrik, antalRatter);
 
+//9
+let idag = billigast(meny.filter(n => n.kategori === "lunch"));
+if (idag) {
+    markeraDagensRatt(menyLista, idag.id);
+}
