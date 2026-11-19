@@ -72,5 +72,16 @@ export function uppdateraRubrik(element: HTMLElement, antal: number): void {
 // 4. Markera EN rätt som dagens rätt: klassen "dagens" ska finnas på kortet med rätt
 //    data-id, och inte på något annat kort. Anropas igen = markeringen flyttas.
 export function markeraDagensRatt(container: HTMLElement, id: number): void {
-  // TODO
+  /*const igar = container.querySelector(`.dagens`)
+  const idag = container.querySelector(`[id="${id}"]`)
+  if (idag) {
+    igar?.classList.remove("dagens");
+    idag?.classList.add("dagens");
+  }*/
+  const rattCards = container.querySelectorAll('article')
+  for (const card of rattCards) {
+    if (card.dataset.id === id.toString()) {
+      card.classList.toggle('dagens', true)
+    } else card.classList.toggle('dagens', false)
+  }
 }
