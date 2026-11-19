@@ -55,6 +55,7 @@ export function visaMeny(container: HTMLElement, ratter: Ratt[]): void {
     tom.classList.add("tom");
     tom.textContent = "Inga rätter hittades.";
     container.append(tom);
+    console.log(tom.textContent);
   }
 }
 
