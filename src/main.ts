@@ -54,4 +54,7 @@ nyP.textContent = '<img src="x" onerror="console.log(\'Attack!\')">'    //innerH
 // 8. Anropa visaMeny med menyn, och uppdateraRubrik med antalet rätter.
 // 9. Dagens rätt = den billigaste lunchen. Använd filter och billigast (från meny.js)
 //    och markeraDagensRatt.
-// TODO
+
+//7
+const menyLista = document.querySelector("#meny-lista");
+const menyRubrik = document.querySelector("#meny-rubrik");
