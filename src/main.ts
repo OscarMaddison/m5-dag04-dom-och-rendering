@@ -56,5 +56,16 @@ nyP.textContent = '<img src="x" onerror="console.log(\'Attack!\')">'    //innerH
 //    och markeraDagensRatt.
 
 //7
-const menyLista = document.querySelector("#meny-lista");
-const menyRubrik = document.querySelector("#meny-rubrik");
+const menyLista = document.querySelector<HTMLElement>(".meny-lista")!;
+const menyRubrik = document.querySelector<HTMLElement>("#meny-rubrik")!;
+
+//8
+visaMeny(menyLista, meny);
+let antalRatter: number = 0;
+if (!menyLista.querySelector(".tom")){
+    for (const ratt of menyLista.querySelectorAll(".kort")){
+        antalRatter++;
+    }
+}
+uppdateraRubrik(menyRubrik, antalRatter);
+
